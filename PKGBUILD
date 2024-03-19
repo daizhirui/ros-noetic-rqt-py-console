@@ -7,7 +7,7 @@ pkgname='ros-noetic-rqt-py-console'
 pkgver='0.4.10'
 _pkgver_patch=0
 arch=('any')
-pkgrel=1
+pkgrel=2
 license=('BSD')
 
 ros_makedepends=(
@@ -34,9 +34,10 @@ depends=(
 	python-rospkg
 )
 
-_dir="rqt_py_console-${pkgver}/"
-source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_py_console/archive/${pkgver}.tar.gz")
-sha256sums=('2478c0255758c5e45f0b4daf24fa447716d94dacfe05598fcc1a2192df518b95')
+_commit="f9bf6037042541b46d0c1a849329ea13a15c9a98"
+_dir="rqt_py_console-${_commit}/"
+source=("${pkgname}-${pkgver}.tar.gz"::"https://github.com/ros-visualization/rqt_py_console/archive/${_commit}.tar.gz")
+sha256sums=('cd264a70e852541983a8628448479ee8f0b5768ee4ea87ab56fd614a7a348c5f')
 
 build() {
 	# Use ROS environment variables.
